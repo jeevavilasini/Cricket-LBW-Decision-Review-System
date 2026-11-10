@@ -1,0 +1,8 @@
+drs-env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+outputs/
+*.egg-info/
+.DS_Store

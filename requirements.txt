@@ -1,0 +1,15 @@
+# Core scientific stack (already present in most conda/venv environments)
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+
+# Optional components
+#   opencv: required only for the real-video pipeline (drs.video / drs.detection)
+#   streamlit: required only for the interactive demo (app/streamlit_app.py)
+#   imageio: fallback video reader when OpenCV is unavailable
+opencv-python-headless>=4.8 ; python_version >= "3.9"
+streamlit>=1.30
+imageio>=2.31
+imageio-ffmpeg>=0.4
+pytest>=7.4

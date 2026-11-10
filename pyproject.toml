@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drs-mm"
+version = "0.1.0"
+description = "Mathematical modelling and computational reconstruction of cricket's Decision Review System"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python-headless>=4.8", "imageio>=2.31", "imageio-ffmpeg>=0.4", "pillow>=10.0"]
+app = ["streamlit>=1.30"]
+dev = ["pytest>=7.4", "tabulate>=0.9"]
+
+[tool.setuptools.packages.find]
+include = ["drs*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
